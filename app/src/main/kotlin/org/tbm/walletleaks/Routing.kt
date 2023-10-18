@@ -1,4 +1,4 @@
-package org.tbm.plugins
+package org.tbm.walletleaks
 
 import io.ktor.server.application.*
 import io.ktor.server.response.*

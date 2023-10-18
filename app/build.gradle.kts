@@ -12,7 +12,7 @@ group = "org.tbm"
 version = "0.0.1"
 
 application {
-    mainClass.set("org.tbm.ApplicationKt")
+    mainClass.set("app.org.tbm.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
