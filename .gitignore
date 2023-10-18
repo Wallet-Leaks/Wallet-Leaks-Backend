@@ -17,7 +17,8 @@ bin/
 !**/src/test/**/bin/
 
 ### IntelliJ IDEA ###
-.idea
+.idea/*
+!.idea/icon.svg
 *.iws
 *.iml
 *.ipr
@@ -34,3 +35,9 @@ out/
 
 ### VS Code ###
 .vscode/
+
+### Node ###
+node_modules/
+
+### MacOSX ###
+**/.DS_Store
