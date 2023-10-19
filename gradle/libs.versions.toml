@@ -1,0 +1,46 @@
+[versions]
+kotlin = "1.9.10"
+ktor = "2.3.5"
+postgresql = "42.5.1"
+exposed = "0.41.1"
+h2 = "2.1.214"
+hikaricp = "5.0.1"
+ehcache = "3.10.8"
+konsist = "0.11.0"
+kotest = "5.7"
+[libraries]
+kotlin-test = { group = "org.jetbrains.kotlin", name = "kotlin-test", version.ref = "kotlin" }
+ktor-server-core = { group = "io.ktor", name = "ktor-server-core", version.ref = "ktor" }
+ktor-server-engine-netty = { group = "io.ktor", name = "ktor-server-netty", version.ref = "ktor" }
+ktor-server-security-authentication = { group = "io.ktor", name = "ktor-server-auth", version.ref = "ktor" }
+ktor-server-security-sessions = { group = "io.ktor", name = "ktor-server-sessions", version.ref = "ktor" }
+ktor-server-routing-resources = { group = "io.ktor", name = "ktor-server-resources", version.ref = "ktor" }
+ktor-server-routing-status-pages = { group = "io.ktor", name = "ktor-server-status-pages", version.ref = "ktor" }
+ktor-server-http-openapi = { group = "io.ktor", name = "ktor-server-openapi", version.ref = "ktor" }
+ktor-server-http-swagger = { group = "io.ktor", name = "ktor-server-swagger", version.ref = "ktor" }
+ktor-server-http-default-headers = { group = "io.ktor", name = "ktor-server-default-headers", version.ref = "ktor" }
+ktor-server-monitoring-call-logging = { group = "io.ktor", name = "ktor-server-call-logging", version.ref = "ktor" }
+ktor-server-serialization-content-negotiation = { group = "io.ktor", name = "ktor-server-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { group = "io.ktor", name = "ktor-serialization-kotlinx-json", version.ref = "ktor" }
+ktor-server-sockets-websockets = { group = "io.ktor", name = "ktor-server-websockets", version.ref = "ktor" }
+ktor-server-test-host = { group = "io.ktor", name = "ktor-server-test-host", version.ref = "ktor" }
+postgresql = { group = "org.postgresql", name = "postgresql", version.ref = "postgresql" }
+exposed-core = { group = "org.jetbrains.exposed", name = "exposed-core", version.ref = "exposed" }
+exposed-dao = { group = "org.jetbrains.exposed", name = "exposed-dao", version.ref = "exposed" }
+exposed-jdbc = { group = "org.jetbrains.exposed", name = "exposed-jdbc", version.ref = "exposed" }
+h2 = { group = "com.h2database", name = "h2", version.ref = "h2" }
+connection-pooling-hikaricp = { group = "com.zaxxer", name = "HikariCP", version.ref = "hikaricp" }
+caching-ehcache = { group = "org.ehcache", name = "ehcache", version.ref = "ehcache" }
+testing-konsist = { group = "com.lemonappdev", name = "konsist", version.ref = "konsist" }
+testing-kotest-runner-junit5 = { group = "io.kotest", name = "kotest-runner-junit5", version.ref = "kotest" }
+testing-kotest-assertions-core = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
+testing-kotest-assertions-ktor = { group = "io.kotest", name = "kotest-assertions-ktor", version.ref = "kotest" }
+testing-kotest-property = { group = "io.kotest", name = "kotest-property", version.ref = "kotest" }
+
+[bundles]
+ktor-core = ["ktor-server-core", "ktor-server-engine-netty", "ktor-server-security-sessions", "ktor-server-routing-resources", "ktor-server-routing-status-pages", "ktor-server-http-openapi", "ktor-server-http-swagger", "ktor-server-http-default-headers", "ktor-server-monitoring-call-logging", "ktor-server-serialization-content-negotiation", "ktor-serialization-kotlinx-json", "postgresql", "h2"]
+exposed = ["exposed-core", "exposed-dao", "exposed-jdbc"]
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ktor = { id = "io.ktor.plugin", version.ref = "ktor" }
